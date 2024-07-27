@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To Do List</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="header-title">TO DO LIST</h1>
+            <form id="search-form">
+                <input type="text" placeholder="search...">
+            </form>
+        </header>
+        <main>
+            <h2>your list</h2>
+            <ul id="to-do-list">
+                <li class="to-do-item">
+                    <span class="title">clean up your room</span>
+                    <button class="delete-btn">delete</button>
+                </li>
+                <li class="to-do-item">
+                    <span class="title">find a motivational book for reading</span>
+                    <button class="delete-btn">delete</button>
+                </li>
+                <li class="to-do-item">
+                    <span class="title">go to the gym</span>
+                    <button class="delete-btn">delete</button>
+                </li>
+                <li class="to-do-item">
+                    <span class="title">set your goals</span>
+                    <button class="delete-btn">delete</button>
+                </li>
+            </ul>
+            <form id="add-form">
+                <input type="text" placeholder="add a new task...">
+                <button type="button">add</button>
+            </form>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
