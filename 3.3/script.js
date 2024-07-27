@@ -1,6 +1,6 @@
 let itemcounter = document.getElementsByClassName("item").length;
 
-document.getElementsByClassName("trashimg").forEach(button => {
+document.querySelectorAll(".trashimg").forEach(button => {
     button.addEventListener('click', handleDelete)
 });
 function handleDelete(e){
@@ -9,7 +9,7 @@ function handleDelete(e){
     itemcounter--;
     updateItemNumbers();
 }
-document.getElementsByClassName("add-carts").addEventListener("click",  handleAddCarts)
+document.getElementsByClassName("add-carts")[0].addEventListener("click",  handleAddCarts)
 function handleAddCarts(e){
     if (itemcounter >= 15) {
         alert("reach to maximum carts");
@@ -33,14 +33,14 @@ function handleAddCarts(e){
                 quas magni quaerat impedit maiores optio id dolores delectus praesentium omnis autem libero harum?
             </p>
         </div>`;
-    const list = document.getElementsByClassName("carts-list");
+    const list = document.getElementsByClassName("carts-list")[0];
     list.appendChild(newitem);
     updateItemNumbers();
-    document.getElementsByClassName("trashimg").forEach(button => {
+    document.querySelectorAll(".trashimg").forEach(button => {
         button.addEventListener('click', handleDelete)
     });
 }
 
 function updateItemNumbers() {
-        itemcounter = document.getElementsByClassName("item").length;
+ itemcounter = document.getElementsByClassName("item").length;
 }
