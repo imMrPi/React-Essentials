@@ -1,20 +1,22 @@
-let itemcounter = 6;
+let itemcounter = document.getElementsByClassName("item").length;
 
-document.querySelectorAll(".trashimg").forEach(button => {
-    button.addEventListener('click', function () {
-        this.parentElement.remove();
-        itemcounter--;
-        updateItemNumbers();
-    });
+document.getElementsByClassName("trashimg").forEach(button => {
+    button.addEventListener('click', handleDelete)
 });
-
-document.querySelector(".add-carts").addEventListener("click", (e) => {
+function handleDelete(e){
+    const button = e.target;
+    button.parentElement.remove();
+    itemcounter--;
+    updateItemNumbers();
+}
+document.getElementsByClassName("add-carts").addEventListener("click",  handleAddCarts)
+function handleAddCarts(e){
     if (itemcounter >= 15) {
         alert("reach to maximum carts");
         return;
     }
     itemcounter++;
-    let newitem = document.createElement("li");
+    const newitem = document.createElement("li");
     newitem.classList.add("item");
     newitem.innerHTML = `   
         <h2>
@@ -31,21 +33,14 @@ document.querySelector(".add-carts").addEventListener("click", (e) => {
                 quas magni quaerat impedit maiores optio id dolores delectus praesentium omnis autem libero harum?
             </p>
         </div>`;
-    let list = document.querySelector(".carts-list");
+    const list = document.getElementsByClassName("carts-list");
     list.appendChild(newitem);
     updateItemNumbers();
-    document.querySelectorAll(".trashimg").forEach(button => {
-        button.addEventListener('click', function () {
-            this.parentElement.remove();
-            itemcounter--;
-            updateItemNumbers();
-        });
+    document.getElementsByClassName("trashimg").forEach(button => {
+        button.addEventListener('click', handleDelete)
     });
-});
+}
 
 function updateItemNumbers() {
-    let items = document.querySelectorAll(".item");
-    items.forEach((item, index) => {
-        item.querySelector("h2").innerText = `item ${index + 1}`;
-    });
+        itemcounter = document.getElementsByClassName("item").length;
 }
