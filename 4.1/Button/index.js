@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Button from './components/Button/Button';
-
+import ClassButton from './components/Button/ClassBaseButton';
+import FunctionalButton from './components/Button/FunctionalButton';
 
 const rootElement = document.getElementById('root');
 
 
 const root = ReactDOM.createRoot(rootElement);
-root.render(<Button />);
+root.render(<FunctionalButton/>);
