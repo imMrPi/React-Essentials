@@ -1,0 +1,48 @@
+
+.card {
+    width: 200px;
+    height: 250px;
+    display: grid;
+    grid-template: 30px 1fr / 1fr 30px;
+    row-gap: 15px;
+    margin-left: 10px;
+    margin-top: 10px;
+    background-color: #f6efef; 
+    box-shadow: 0 0 15px rgba(0, 0, 255, 0.5), 
+                0 0 30px rgba(0, 0, 255, 0.4), 
+                0 0 45px rgba(0, 0, 255, 0.3);
+    transition: transform 0.3s ease-in-out; 
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+.DeleteBtn {
+    width: 30px;
+    height: 30px;
+    background-image: url(../pictures/trash.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    grid-column: 2;
+    grid-row: 1;
+}
+.DeleteBtn:hover{
+    opacity: 0.46
+}
+.title{
+    font-size: 20px;
+
+}
+p{
+    font-size: 15px;
+}
+.cart-container{
+    background-color:#1b1b1c;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
